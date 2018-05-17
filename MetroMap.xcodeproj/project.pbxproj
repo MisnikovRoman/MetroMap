@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		C8D8BD5820ADF2CE007C7F52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8BD5720ADF2CE007C7F52 /* AppDelegate.swift */; };
-		C8D8BD5A20ADF2CE007C7F52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8BD5920ADF2CE007C7F52 /* ViewController.swift */; };
+		C8D8BD5A20ADF2CE007C7F52 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8BD5920ADF2CE007C7F52 /* SearchVC.swift */; };
 		C8D8BD5D20ADF2CE007C7F52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D8BD5B20ADF2CE007C7F52 /* Main.storyboard */; };
 		C8D8BD5F20ADF2D0007C7F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D8BD5E20ADF2D0007C7F52 /* Assets.xcassets */; };
 		C8D8BD6220ADF2D0007C7F52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D8BD6020ADF2D0007C7F52 /* LaunchScreen.storyboard */; };
 		C8D8BD6D20ADF2D0007C7F52 /* MetroMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8BD6C20ADF2D0007C7F52 /* MetroMapTests.swift */; };
+		C8D8BD7B20ADF62C007C7F52 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8BD7920ADF62C007C7F52 /* Matrix.swift */; };
+		C8D8BD7C20ADF62C007C7F52 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8BD7A20ADF62C007C7F52 /* Point.swift */; };
+		C8D8BD7E20ADF63F007C7F52 /* FindRouteInGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8BD7D20ADF63F007C7F52 /* FindRouteInGraph.swift */; };
+		C8D8BD8020ADF68B007C7F52 /* MetroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8BD7F20ADF68B007C7F52 /* MetroModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +32,7 @@
 /* Begin PBXFileReference section */
 		C8D8BD5420ADF2CE007C7F52 /* MetroMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetroMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D8BD5720ADF2CE007C7F52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C8D8BD5920ADF2CE007C7F52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C8D8BD5920ADF2CE007C7F52 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		C8D8BD5C20ADF2CE007C7F52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C8D8BD5E20ADF2D0007C7F52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8D8BD6120ADF2D0007C7F52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +40,10 @@
 		C8D8BD6820ADF2D0007C7F52 /* MetroMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetroMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D8BD6C20ADF2D0007C7F52 /* MetroMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroMapTests.swift; sourceTree = "<group>"; };
 		C8D8BD6E20ADF2D0007C7F52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8D8BD7920ADF62C007C7F52 /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		C8D8BD7A20ADF62C007C7F52 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		C8D8BD7D20ADF63F007C7F52 /* FindRouteInGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindRouteInGraph.swift; sourceTree = "<group>"; };
+		C8D8BD7F20ADF68B007C7F52 /* MetroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +85,9 @@
 		C8D8BD5620ADF2CE007C7F52 /* MetroMap */ = {
 			isa = PBXGroup;
 			children = (
+				C8D8BD7820ADF5FF007C7F52 /* Model */,
+				C8D8BD7720ADF5F9007C7F52 /* Controllers */,
 				C8D8BD5720ADF2CE007C7F52 /* AppDelegate.swift */,
-				C8D8BD5920ADF2CE007C7F52 /* ViewController.swift */,
 				C8D8BD5B20ADF2CE007C7F52 /* Main.storyboard */,
 				C8D8BD5E20ADF2D0007C7F52 /* Assets.xcassets */,
 				C8D8BD6020ADF2D0007C7F52 /* LaunchScreen.storyboard */,
@@ -94,6 +103,25 @@
 				C8D8BD6E20ADF2D0007C7F52 /* Info.plist */,
 			);
 			path = MetroMapTests;
+			sourceTree = "<group>";
+		};
+		C8D8BD7720ADF5F9007C7F52 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C8D8BD5920ADF2CE007C7F52 /* SearchVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C8D8BD7820ADF5FF007C7F52 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C8D8BD7F20ADF68B007C7F52 /* MetroModel.swift */,
+				C8D8BD7D20ADF63F007C7F52 /* FindRouteInGraph.swift */,
+				C8D8BD7920ADF62C007C7F52 /* Matrix.swift */,
+				C8D8BD7A20ADF62C007C7F52 /* Point.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +225,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8D8BD5A20ADF2CE007C7F52 /* ViewController.swift in Sources */,
+				C8D8BD8020ADF68B007C7F52 /* MetroModel.swift in Sources */,
+				C8D8BD7C20ADF62C007C7F52 /* Point.swift in Sources */,
+				C8D8BD5A20ADF2CE007C7F52 /* SearchVC.swift in Sources */,
 				C8D8BD5820ADF2CE007C7F52 /* AppDelegate.swift in Sources */,
+				C8D8BD7B20ADF62C007C7F52 /* Matrix.swift in Sources */,
+				C8D8BD7E20ADF63F007C7F52 /* FindRouteInGraph.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
