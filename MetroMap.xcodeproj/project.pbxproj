@@ -19,6 +19,7 @@
 		C8D8BD7C20ADF62C007C7F52 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8BD7A20ADF62C007C7F52 /* Point.swift */; };
 		C8D8BD7E20ADF63F007C7F52 /* FindRouteInGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8BD7D20ADF63F007C7F52 /* FindRouteInGraph.swift */; };
 		C8D8BD8020ADF68B007C7F52 /* MetroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8BD7F20ADF68B007C7F52 /* MetroModel.swift */; };
+		C8DB0EE720B357C200B521C9 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB0EE620B357C200B521C9 /* Graph.swift */; };
 		CF5335650E22C4CF0B6A61F8 /* Pods_MetroMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA2DEB4AE2EDDDC67E3E4F4 /* Pods_MetroMapTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		C8D8BD7A20ADF62C007C7F52 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		C8D8BD7D20ADF63F007C7F52 /* FindRouteInGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindRouteInGraph.swift; sourceTree = "<group>"; };
 		C8D8BD7F20ADF68B007C7F52 /* MetroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroModel.swift; sourceTree = "<group>"; };
+		C8DB0EE620B357C200B521C9 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		D5ED4853EEF4C0D484E28168 /* Pods_MetroMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetroMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -160,9 +162,10 @@
 			isa = PBXGroup;
 			children = (
 				C8D8BD7F20ADF68B007C7F52 /* MetroModel.swift */,
-				C8D8BD7D20ADF63F007C7F52 /* FindRouteInGraph.swift */,
 				C8D8BD7920ADF62C007C7F52 /* Matrix.swift */,
+				C8D8BD7D20ADF63F007C7F52 /* FindRouteInGraph.swift */,
 				C8D8BD7A20ADF62C007C7F52 /* Point.swift */,
+				C8DB0EE620B357C200B521C9 /* Graph.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8DB0EE720B357C200B521C9 /* Graph.swift in Sources */,
 				C8D8BD8020ADF68B007C7F52 /* MetroModel.swift in Sources */,
 				C8D8BD7C20ADF62C007C7F52 /* Point.swift in Sources */,
 				C8D8BD5A20ADF2CE007C7F52 /* SearchVC.swift in Sources */,
