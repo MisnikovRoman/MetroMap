@@ -1,4 +1,5 @@
 {
+    "version": 0.01,
     "city": "Saint Petersburg",
     "names": ["1", "2", "3"],
     "matrix": [
