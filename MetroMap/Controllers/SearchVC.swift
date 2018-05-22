@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class SearchVC: UIViewController {
 
@@ -52,9 +53,13 @@ class SearchVC: UIViewController {
 //        alert.addAction(action)
 //        self.present(alert, animated: true, completion: nil)
 //
-        MetroModel.instance.makeMatrix()
-        print(MetroModel.instance.makeMatrix())
+        let a = MetroModel.instance.graph
+        print(a)
         
+        guard let url = URL(string: URL_METRO_MAP) else { return }
+        Alamofire.request(url).responseJSON { (response) in
+            print(response.value)
+        }
     }
 }
 
@@ -67,7 +72,8 @@ extension SearchVC: UIPickerViewDelegate, UIPickerViewDataSource {
 
     // returns the # of rows in each component
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return MetroModel.instance.names.count
+        // return MetroModel.instance.names.count
+        return 3
     }
 //
 //    // configure items inside picker view

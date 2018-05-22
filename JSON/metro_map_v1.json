@@ -1,10 +1,24 @@
 {
     "version": 0.01,
     "city": "Saint Petersburg",
-    "names": ["1", "2", "3"],
-    "matrix": [
-        [0, 1, 2],
-        [1, 2, 3],
-        [3, 2, 1]
+    "graph": [
+      {
+        "start": "Петроградская",
+        "end": "Горьковская",
+        "weight": 6,
+        "oriented": false
+      },
+      {
+        "start": "Горьковская",
+        "end": "Невский проспект",
+        "weight": 5,
+        "oriented": false
+      },
+      {
+        "start": "Невский проспект",
+        "end": "Сенная площадь",
+        "weight": 6,
+        "oriented": false
+      },
     ]
 }
