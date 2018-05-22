@@ -12,9 +12,9 @@ class MetroModel {
 
     static let instance = MetroModel()
     
-    private let spbEdges = [
-        GraphEdge(from: "Петроградская", to: "Горьковская", weight: 4, oriented: false),
-        GraphEdge(from: "Горьковская", to: "Невский проспект", weight: 5, oriented: false)
+    var spbEdges = [
+        GraphEdge(start: "Петроградская", end: "Горьковская", weight: 4, oriented: false),
+        GraphEdge(start: "Горьковская", end: "Невский проспект", weight: 5, oriented: false)
     ]
     
     var graph: Graph { return Graph(edges: spbEdges) }

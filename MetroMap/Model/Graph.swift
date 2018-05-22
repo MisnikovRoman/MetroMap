@@ -11,18 +11,18 @@ import Foundation
 import Foundation
 
 
-struct GraphEdge {
+struct GraphEdge: Decodable {
     var start: String
     var end: String
     var weight: Int
-    var oriented: Bool = false
+    var oriented: Bool
     
-    init (from start: String, to end: String, weight: Int, oriented: Bool) {
-        self.start = start
-        self.end = end
-        self.weight = weight
-        self.oriented = oriented
-    }
+//    init (from start: String, to end: String, weight: Int, oriented: Bool) {
+//        self.start = start
+//        self.end = end
+//        self.weight = weight
+//        self.oriented = oriented
+//    }
 }
 
 class Graph: CustomStringConvertible {
