@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		419E69F127EA2E8EFD015974 /* Pods_MetroMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5ED4853EEF4C0D484E28168 /* Pods_MetroMap.framework */; };
+		C80BFED620B5979E003C1DEA /* SimpleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80BFED520B5979E003C1DEA /* SimpleVC.swift */; };
+		C80BFED920B597C5003C1DEA /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80BFED820B597C5003C1DEA /* StationCell.swift */; };
 		C80FA2CF20AE18F900BAE4B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80FA2CE20AE18F900BAE4B3 /* Constants.swift */; };
 		C8D8BD5820ADF2CE007C7F52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8BD5720ADF2CE007C7F52 /* AppDelegate.swift */; };
 		C8D8BD5A20ADF2CE007C7F52 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8BD5920ADF2CE007C7F52 /* SearchVC.swift */; };
@@ -39,6 +41,8 @@
 		5D8A00E49D75B04A362B399D /* Pods-MetroMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetroMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-MetroMap/Pods-MetroMap.release.xcconfig"; sourceTree = "<group>"; };
 		7AA2DEB4AE2EDDDC67E3E4F4 /* Pods_MetroMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetroMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C70B4C1730EEDFFEE94EC5E2 /* Pods-MetroMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetroMapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MetroMapTests/Pods-MetroMapTests.release.xcconfig"; sourceTree = "<group>"; };
+		C80BFED520B5979E003C1DEA /* SimpleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleVC.swift; sourceTree = "<group>"; };
+		C80BFED820B597C5003C1DEA /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
 		C80FA2CE20AE18F900BAE4B3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C8D8BD5420ADF2CE007C7F52 /* MetroMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetroMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D8BD5720ADF2CE007C7F52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +102,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C80BFED720B597A8003C1DEA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C80BFED820B597C5003C1DEA /* StationCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C80FA2CD20AE18E600BAE4B3 /* Extra */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +147,7 @@
 				C8D8BD6320ADF2D0007C7F52 /* Info.plist */,
 				C8D8BD5E20ADF2D0007C7F52 /* Assets.xcassets */,
 				C8D8BD7820ADF5FF007C7F52 /* Model */,
+				C80BFED720B597A8003C1DEA /* View */,
 				C8D8BD7720ADF5F9007C7F52 /* Controllers */,
 				C80FA2CD20AE18E600BAE4B3 /* Extra */,
 			);
@@ -154,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				C8D8BD5920ADF2CE007C7F52 /* SearchVC.swift */,
+				C80BFED520B5979E003C1DEA /* SimpleVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -379,7 +393,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C80BFED920B597C5003C1DEA /* StationCell.swift in Sources */,
 				C8DB0EE720B357C200B521C9 /* Graph.swift in Sources */,
+				C80BFED620B5979E003C1DEA /* SimpleVC.swift in Sources */,
 				C8D8BD8020ADF68B007C7F52 /* MetroModel.swift in Sources */,
 				C8D8BD7C20ADF62C007C7F52 /* Point.swift in Sources */,
 				C8D8BD5A20ADF2CE007C7F52 /* SearchVC.swift in Sources */,

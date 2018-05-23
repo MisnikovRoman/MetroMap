@@ -10,3 +10,6 @@ import Foundation
 
 // url constants
 let URL_METRO_MAP = "https://raw.githubusercontent.com/MisnikovRoman/MetroMap/master/JSON/metro_map_v1.json"
+
+// cell identifier constants
+let STATION_CELL = "stationTableViewCell"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xbf-T4-n6C">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -37,7 +37,7 @@
                                 <rect key="frame" x="0.0" y="487" width="375" height="180"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2QO-Jc-Zjp">
-                                        <rect key="frame" x="0.0" y="35" width="375" height="110"/>
+                                        <rect key="frame" x="0.0" y="35.5" width="375" height="110"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="From" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LMx-xE-AoZ">
                                                 <rect key="frame" x="16" y="0.0" width="343" height="30"/>
@@ -99,6 +99,114 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+        <!--SimpleVC-->
+        <scene sceneID="RpC-61-5N5">
+            <objects>
+                <viewController id="xbf-T4-n6C" customClass="SimpleVC" customModule="MetroMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UPZ-L1-mhh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="от" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fr2-IG-5Oc">
+                                <rect key="frame" x="37.5" y="114" width="300" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="до" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="znd-NP-Xyg">
+                                <rect key="frame" x="37.5" y="167" width="300" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S95-Pp-Cex">
+                                <rect key="frame" x="0.0" y="277" width="375" height="390"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stationTableViewCell" id="WwF-aX-abo" customClass="StationCell" customModule="MetroMap" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WwF-aX-abo" id="K12-QF-ZGv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l1k-iq-2HJ">
+                                                    <rect key="frame" x="30" y="0.0" width="10" height="44"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="10" id="kjU-U2-zZ3"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 мин." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbc-DR-lQ3">
+                                                    <rect key="frame" x="278" y="11" width="52" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Петроградская" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ON-y3-lz1">
+                                                    <rect key="frame" x="56" y="11" width="122" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Dbc-DR-lQ3" firstAttribute="centerY" secondItem="K12-QF-ZGv" secondAttribute="centerY" id="9Hn-vM-979"/>
+                                                <constraint firstItem="2ON-y3-lz1" firstAttribute="leading" secondItem="l1k-iq-2HJ" secondAttribute="trailing" constant="16" id="DeV-RP-gRI"/>
+                                                <constraint firstAttribute="trailing" secondItem="Dbc-DR-lQ3" secondAttribute="trailing" constant="45" id="KOJ-2a-2XJ"/>
+                                                <constraint firstItem="2ON-y3-lz1" firstAttribute="centerY" secondItem="K12-QF-ZGv" secondAttribute="centerY" id="KmR-JU-gC5"/>
+                                                <constraint firstItem="l1k-iq-2HJ" firstAttribute="top" secondItem="K12-QF-ZGv" secondAttribute="top" id="ecv-uQ-Nav"/>
+                                                <constraint firstAttribute="bottom" secondItem="l1k-iq-2HJ" secondAttribute="bottom" id="jSg-61-CCr"/>
+                                                <constraint firstItem="l1k-iq-2HJ" firstAttribute="leading" secondItem="K12-QF-ZGv" secondAttribute="leading" constant="30" id="lFV-rt-HMj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lineView" destination="l1k-iq-2HJ" id="PN8-Ek-t6x"/>
+                                            <outlet property="stationNameLbl" destination="2ON-y3-lz1" id="POq-5b-sOg"/>
+                                            <outlet property="timeLbl" destination="Dbc-DR-lQ3" id="alo-tO-9Bc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3OB-Mg-8Cw">
+                                <rect key="frame" x="166" y="222" width="42" height="30"/>
+                                <state key="normal" title="найти"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Расчет маршрута между станциями Петербургского метрополитена" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDn-XL-xpL">
+                                <rect key="frame" x="0.0" y="40" width="375" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Fr2-IG-5Oc" firstAttribute="top" secondItem="FDn-XL-xpL" secondAttribute="bottom" constant="33" id="0OY-oq-iQ2"/>
+                            <constraint firstItem="znd-NP-Xyg" firstAttribute="width" secondItem="Fr2-IG-5Oc" secondAttribute="width" id="5bM-W3-6UV"/>
+                            <constraint firstItem="FDn-XL-xpL" firstAttribute="top" secondItem="fj1-Gp-UFU" secondAttribute="top" constant="20" id="ByR-dX-wYy"/>
+                            <constraint firstItem="3OB-Mg-8Cw" firstAttribute="top" secondItem="znd-NP-Xyg" secondAttribute="bottom" constant="25" id="Db5-ST-dsv"/>
+                            <constraint firstItem="Fr2-IG-5Oc" firstAttribute="centerX" secondItem="FDn-XL-xpL" secondAttribute="centerX" id="FXI-DB-SRl"/>
+                            <constraint firstItem="FDn-XL-xpL" firstAttribute="leading" secondItem="fj1-Gp-UFU" secondAttribute="leading" id="IMr-G9-lkZ"/>
+                            <constraint firstItem="3OB-Mg-8Cw" firstAttribute="centerX" secondItem="znd-NP-Xyg" secondAttribute="centerX" id="Og2-mI-DOe"/>
+                            <constraint firstItem="S95-Pp-Cex" firstAttribute="top" secondItem="3OB-Mg-8Cw" secondAttribute="bottom" constant="25" id="Plz-Zh-gd8"/>
+                            <constraint firstItem="S95-Pp-Cex" firstAttribute="trailing" secondItem="fj1-Gp-UFU" secondAttribute="trailing" id="Q8h-zS-Wuo"/>
+                            <constraint firstItem="fj1-Gp-UFU" firstAttribute="trailing" secondItem="FDn-XL-xpL" secondAttribute="trailing" id="XH5-pJ-ovc"/>
+                            <constraint firstItem="znd-NP-Xyg" firstAttribute="centerX" secondItem="Fr2-IG-5Oc" secondAttribute="centerX" id="YAF-8P-Jym"/>
+                            <constraint firstItem="Fr2-IG-5Oc" firstAttribute="width" secondItem="UPZ-L1-mhh" secondAttribute="width" multiplier="0.8" id="gm1-HO-hZF"/>
+                            <constraint firstItem="S95-Pp-Cex" firstAttribute="leading" secondItem="fj1-Gp-UFU" secondAttribute="leading" id="n7P-m1-90R"/>
+                            <constraint firstItem="S95-Pp-Cex" firstAttribute="bottom" secondItem="fj1-Gp-UFU" secondAttribute="bottom" id="qd4-5Z-kl8"/>
+                            <constraint firstItem="znd-NP-Xyg" firstAttribute="top" secondItem="Fr2-IG-5Oc" secondAttribute="bottom" constant="23" id="sUu-3J-Q0z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fj1-Gp-UFU"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="S95-Pp-Cex" id="nGa-Ji-WM9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Msp-da-CEC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1159.2" y="132.68365817091455"/>
         </scene>
     </scenes>
     <resources>

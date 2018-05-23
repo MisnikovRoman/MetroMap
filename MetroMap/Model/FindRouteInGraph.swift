@@ -23,7 +23,7 @@ func searchAllRoutesForPoint(pointIndex: Int, graph: Matrix<Int>) -> [Int]? {
     var checkedVertex = Array(repeating: false, count: graph.columns)
     // mark start point as checked
     checkedVertex[pointIndex] = true
-    print(checkedVertex)
+    // print(checkedVertex)
     
     while(checkedVertex.contains(false)) {
         
