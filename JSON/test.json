@@ -1,0 +1,34 @@
+{
+  "stations": [
+    {
+      "name": "A",
+      "color": "blue",
+      "id": 0
+    },
+    {
+      "name": "B",
+      "color": "blue",
+      "id": 1
+    },
+    {
+      "name": "C",
+      "color": "blue",
+      "id": 2
+    }
+  ],
+  "connections": [
+    {
+      "start": "A",
+      "end": "B",
+      "weight": 2.3,
+      "oriented": false
+    },
+    {
+      "start": "B",
+      "end": "C",
+      "weight": 3.1,
+      "oriented": false
+    }
+
+  ]
+}

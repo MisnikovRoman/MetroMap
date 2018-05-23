@@ -162,10 +162,10 @@
 			isa = PBXGroup;
 			children = (
 				C8D8BD7F20ADF68B007C7F52 /* MetroModel.swift */,
-				C8D8BD7920ADF62C007C7F52 /* Matrix.swift */,
-				C8D8BD7D20ADF63F007C7F52 /* FindRouteInGraph.swift */,
-				C8D8BD7A20ADF62C007C7F52 /* Point.swift */,
 				C8DB0EE620B357C200B521C9 /* Graph.swift */,
+				C8D8BD7920ADF62C007C7F52 /* Matrix.swift */,
+				C8D8BD7A20ADF62C007C7F52 /* Point.swift */,
+				C8D8BD7D20ADF63F007C7F52 /* FindRouteInGraph.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
