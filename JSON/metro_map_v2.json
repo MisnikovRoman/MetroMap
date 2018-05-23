@@ -16,28 +16,28 @@
       "name": "Технологические институт",
       "color": "blue",
       "id": 2
-    }
+    },
     {
       "name": "Адмиралтейская",
       "color": "purple",
       "id": 3
-    }
+    },
     {
       "name": "Садовая",
       "color": "purple",
       "id": 4
-    }
-      {
+    },
+    {
       "name": "Спасская",
       "color": "orange",
       "id": 5
-    }
-      {
+    },
+    {
       "name": "Звенигородская",
       "color": "purple",
       "id": 6
-    }
-      {
+    },
+    {
       "name": "Лиговский проспект",
       "color": "orange",
       "id": 7
@@ -56,37 +56,37 @@
       "end": "Технологический институт",
       "weight": 3,
       "oriented": false
-    }
+    },
     {
       "start": "Сенная площадь",
       "end": "Садовая",
       "weight": 2,
       "oriented": false
-    }
+    },
     {
       "start": "Сенная площадь",
       "end": "Спасская",
       "weight": 2,
       "oriented": false
-    }
+    },
     {
       "start": "Адмиралтейская",
       "end": "Садовая",
       "weight": 4,
       "oriented": false
-    }
+    },
     {
       "start": "Садовая",
       "end": "Спасская",
       "weight": 2,
       "oriented": false
-    }
+    },
     {
       "start": "Садовая",
       "end": "Звенигородская",
       "weight": 3,
       "oriented": false
-    }
+    },
     {
       "start": "Спасская",
       "end": "Лиговский проспект",

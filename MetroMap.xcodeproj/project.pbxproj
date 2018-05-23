@@ -10,6 +10,10 @@
 		419E69F127EA2E8EFD015974 /* Pods_MetroMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5ED4853EEF4C0D484E28168 /* Pods_MetroMap.framework */; };
 		C80BFED620B5979E003C1DEA /* SimpleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80BFED520B5979E003C1DEA /* SimpleVC.swift */; };
 		C80BFED920B597C5003C1DEA /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80BFED820B597C5003C1DEA /* StationCell.swift */; };
+		C80BFEDE20B5A5AB003C1DEA /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80BFEDA20B5A5AB003C1DEA /* Matrix.swift */; };
+		C80BFEDF20B5A5AB003C1DEA /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80BFEDB20B5A5AB003C1DEA /* Station.swift */; };
+		C80BFEE020B5A5AB003C1DEA /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80BFEDC20B5A5AB003C1DEA /* Graph.swift */; };
+		C80BFEE120B5A5AB003C1DEA /* StationConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80BFEDD20B5A5AB003C1DEA /* StationConnection.swift */; };
 		C80FA2CF20AE18F900BAE4B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80FA2CE20AE18F900BAE4B3 /* Constants.swift */; };
 		C8D8BD5820ADF2CE007C7F52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8BD5720ADF2CE007C7F52 /* AppDelegate.swift */; };
 		C8D8BD5A20ADF2CE007C7F52 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8BD5920ADF2CE007C7F52 /* SearchVC.swift */; };
@@ -17,11 +21,8 @@
 		C8D8BD5F20ADF2D0007C7F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D8BD5E20ADF2D0007C7F52 /* Assets.xcassets */; };
 		C8D8BD6220ADF2D0007C7F52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D8BD6020ADF2D0007C7F52 /* LaunchScreen.storyboard */; };
 		C8D8BD6D20ADF2D0007C7F52 /* MetroMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8BD6C20ADF2D0007C7F52 /* MetroMapTests.swift */; };
-		C8D8BD7B20ADF62C007C7F52 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8BD7920ADF62C007C7F52 /* Matrix.swift */; };
 		C8D8BD7C20ADF62C007C7F52 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8BD7A20ADF62C007C7F52 /* Point.swift */; };
-		C8D8BD7E20ADF63F007C7F52 /* FindRouteInGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8BD7D20ADF63F007C7F52 /* FindRouteInGraph.swift */; };
 		C8D8BD8020ADF68B007C7F52 /* MetroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8BD7F20ADF68B007C7F52 /* MetroModel.swift */; };
-		C8DB0EE720B357C200B521C9 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB0EE620B357C200B521C9 /* Graph.swift */; };
 		CF5335650E22C4CF0B6A61F8 /* Pods_MetroMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA2DEB4AE2EDDDC67E3E4F4 /* Pods_MetroMapTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,10 @@
 		C70B4C1730EEDFFEE94EC5E2 /* Pods-MetroMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetroMapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MetroMapTests/Pods-MetroMapTests.release.xcconfig"; sourceTree = "<group>"; };
 		C80BFED520B5979E003C1DEA /* SimpleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleVC.swift; sourceTree = "<group>"; };
 		C80BFED820B597C5003C1DEA /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
+		C80BFEDA20B5A5AB003C1DEA /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		C80BFEDB20B5A5AB003C1DEA /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		C80BFEDC20B5A5AB003C1DEA /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		C80BFEDD20B5A5AB003C1DEA /* StationConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationConnection.swift; sourceTree = "<group>"; };
 		C80FA2CE20AE18F900BAE4B3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C8D8BD5420ADF2CE007C7F52 /* MetroMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetroMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D8BD5720ADF2CE007C7F52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,11 +59,8 @@
 		C8D8BD6820ADF2D0007C7F52 /* MetroMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetroMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D8BD6C20ADF2D0007C7F52 /* MetroMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroMapTests.swift; sourceTree = "<group>"; };
 		C8D8BD6E20ADF2D0007C7F52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C8D8BD7920ADF62C007C7F52 /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 		C8D8BD7A20ADF62C007C7F52 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
-		C8D8BD7D20ADF63F007C7F52 /* FindRouteInGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindRouteInGraph.swift; sourceTree = "<group>"; };
 		C8D8BD7F20ADF68B007C7F52 /* MetroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroModel.swift; sourceTree = "<group>"; };
-		C8DB0EE620B357C200B521C9 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		D5ED4853EEF4C0D484E28168 /* Pods_MetroMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetroMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -176,10 +178,11 @@
 			isa = PBXGroup;
 			children = (
 				C8D8BD7F20ADF68B007C7F52 /* MetroModel.swift */,
-				C8DB0EE620B357C200B521C9 /* Graph.swift */,
-				C8D8BD7920ADF62C007C7F52 /* Matrix.swift */,
+				C80BFEDC20B5A5AB003C1DEA /* Graph.swift */,
+				C80BFEDB20B5A5AB003C1DEA /* Station.swift */,
+				C80BFEDD20B5A5AB003C1DEA /* StationConnection.swift */,
+				C80BFEDA20B5A5AB003C1DEA /* Matrix.swift */,
 				C8D8BD7A20ADF62C007C7F52 /* Point.swift */,
-				C8D8BD7D20ADF63F007C7F52 /* FindRouteInGraph.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -394,15 +397,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C80BFED920B597C5003C1DEA /* StationCell.swift in Sources */,
-				C8DB0EE720B357C200B521C9 /* Graph.swift in Sources */,
+				C80BFEDF20B5A5AB003C1DEA /* Station.swift in Sources */,
 				C80BFED620B5979E003C1DEA /* SimpleVC.swift in Sources */,
 				C8D8BD8020ADF68B007C7F52 /* MetroModel.swift in Sources */,
+				C80BFEE020B5A5AB003C1DEA /* Graph.swift in Sources */,
 				C8D8BD7C20ADF62C007C7F52 /* Point.swift in Sources */,
+				C80BFEDE20B5A5AB003C1DEA /* Matrix.swift in Sources */,
 				C8D8BD5A20ADF2CE007C7F52 /* SearchVC.swift in Sources */,
 				C8D8BD5820ADF2CE007C7F52 /* AppDelegate.swift in Sources */,
+				C80BFEE120B5A5AB003C1DEA /* StationConnection.swift in Sources */,
 				C80FA2CF20AE18F900BAE4B3 /* Constants.swift in Sources */,
-				C8D8BD7B20ADF62C007C7F52 /* Matrix.swift in Sources */,
-				C8D8BD7E20ADF63F007C7F52 /* FindRouteInGraph.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

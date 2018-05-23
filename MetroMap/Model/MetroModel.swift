@@ -8,17 +8,10 @@
 
 import Foundation
 
-class MetroModel {
-
-    static let instance = MetroModel()
-    
-    var spbEdges = [
-        GraphEdge(start: "Петроградская", end: "Горьковская", weight: 4, oriented: false),
-        GraphEdge(start: "Горьковская", end: "Невский проспект", weight: 5, oriented: false)
-    ]
-    
-    var graph: Graph { return Graph(edges: spbEdges) }
-    
-    
+struct MetroModel: Decodable {
+    let version: Int
+    let city: String
+    let stations: [Station]
+    let connections: [StationConnection]
 }
 

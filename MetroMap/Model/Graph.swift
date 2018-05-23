@@ -1,114 +1,143 @@
 //
 //  Graph.swift
-//  MetroMap
+//  test-graph
 //
-//  Created by Роман Мисников on 21.05.2018.
+//  Created by Роман Мисников on 23.05.2018.
 //  Copyright © 2018 Роман Мисников. All rights reserved.
 //
 
 import Foundation
 
-import Foundation
-
-
-struct GraphEdge: Decodable {
-    var start: String
-    var end: String
-    var weight: Int
-    var oriented: Bool
-    
-//    init (from start: String, to end: String, weight: Int, oriented: Bool) {
-//        self.start = start
-//        self.end = end
-//        self.weight = weight
-//        self.oriented = oriented
-//    }
-}
-
 class Graph: CustomStringConvertible {
     
-    // names of all verteсes
-    public private(set) var names: [String] = []
-//    // array of edges
-//    public private(set) var edges: [GraphEdge] = []
-    // result matrix
-    public private(set) var matrix: [[Int]] = []
-    // for using print(Graph)
+    // MARK: - Propeties
+    // main matrix
+    var matrix: Matrix<Double>
+    
+    // count of verteces
+    var count: Int { return matrix.columns }
+    
     var description: String {
-        var desk = ""
-        for (index, row) in matrix.enumerated() {
-            desk.append("\(names[index]): ")
-            for item in row {
-                desk.append("\(item) ")
+        var text = ""
+        let cnt = matrix.columns
+        for i in 0..<cnt {
+            text.append("\(i): ")
+            if let rowDouble = matrix.getRow(index: i) {
+                text.append("\(rowDouble)\n")
             }
-            desk.append("\n")
         }
-        return desk
+        return text
     }
     
-    // init with array of Graph edges
-    init(edges: [GraphEdge]) {
-        
-        // add all new names to names array
-        for edge in edges {
-            // add names to names array
-            if !self.names.contains(edge.start){ self.names.append(edge.start) }
-            if !self.names.contains(edge.end){ self.names.append(edge.end) }
+    // MARK: - Initialization
+    // init with received data (stations and connections)
+    init(_ stations: [Station], _ connections: [StationConnection]) {
+        // create matrix with station.count strings (NxN)
+        let newMatrix = Matrix(columns: stations.count, rows: stations.count, with: 0.0)
+        // fill matrix with connections
+        for connection in connections {
+            let start = connection.startId
+            let end = connection.endId
+            if !connection.oriented { newMatrix[start, end] = connection.weight }
+            newMatrix[end, start] = connection.weight
         }
-        
-        // create new matrix
-        var newMatrix = Array(repeating: Array(repeating: 0, count: names.count), count: names.count)
-        
-        // add every edge to matrix
-        for edge in edges {
-            // get indexes of start and end edges
-            guard let startIndex = names.index(of: edge.start) else {return}
-            guard let endIndex = names.index(of: edge.end) else {return}
-            // if graph is not oriented - fill symmetrically
-            if !edge.oriented { newMatrix[endIndex][startIndex] = edge.weight }
-            newMatrix[startIndex][endIndex] = edge.weight
-        }
-        
-        // save new matrix
         self.matrix = newMatrix
     }
     
-//    // build matrix from edges array
-//    private func buildMatrix() -> [[Int]]? {
-//
-//        var matrix = Array(repeating: Array(repeating: 0, count: names.count), count: names.count)
-//
-//        for item in edges {
-//            guard let startIndex = names.index(of: item.start) else { return nil }
-//            guard let endIndex = names.index(of: item.end) else { return nil }
-//            if !item.oriented { matrix[endIndex][startIndex] = item.weight }
-//            matrix[startIndex][endIndex] = item.weight
-//        }
-//
-//        return matrix
-//    }
+    // MARK: - Search methods
+    // This method will return all min weight from entered point index to all other
+    func searchAllRoutesForPoint(pointIndex: Int) -> [Double]? {
+        
+        guard pointIndex < count else { return [] }
+        guard pointIndex >= 0 else { return [] }
+        
+        // array of minimal routes from start point
+        guard var routesFromSearchPoint = matrix.getRow(index: pointIndex) else { return nil }
+        // if in array is 0 -> route length = infinity (max of Int)
+        for (index, value) in routesFromSearchPoint.enumerated() where value == 0 {
+            routesFromSearchPoint[index] = 99999
+        }
+        // array of checked vertexes in graph (проверенные вершины)
+        var checkedVertex = Array(repeating: false, count: matrix.columns)
+        // mark start point as checked
+        checkedVertex[pointIndex] = true
+        // print(checkedVertex)
+        
+        while(checkedVertex.contains(false)) {
+            
+            // find min in "routesFromSearchPoint" and get it's index
+            var minimum: Double = 99999
+            var minimumIndex: Int?
+            // search minimum of unchecked vertexes
+            for (index, value) in routesFromSearchPoint.enumerated() where !checkedVertex[index] {
+                if value < minimum {
+                    minimum = value
+                    minimumIndex = index
+                }
+            }
+            
+            // check if we found minimum in array
+            guard let minIndex = minimumIndex else { break }
+            
+            // all neighbors of checking minimum vertex
+            guard let row = matrix.getRow(index: minIndex) else { break }
+            
+            for (index, value) in row.enumerated() where value != 0{
+                // if we found shorter route - save it
+                if (minimum + value) < routesFromSearchPoint[index] {
+                    routesFromSearchPoint[index] = minimum + value
+                }
+            }
+            checkedVertex[minIndex] = true
+        }
+        
+        // in case of unexpected break of while
+        guard !checkedVertex.contains(false) else { return nil }
+        return routesFromSearchPoint
+    }
     
-//    // add new edge to edges array
-//    private func addEdge(_ edge: GraphEdge) {
-//
-//        let startName = edge.start
-//        let endName = edge.start
-//
-//        // check start and end names are in names array
-//        if !names.contains(startName) { names.append(startName) }
-//        if !names.contains(endName) { names.append(endName) }
-//
-//        // add to edges array new element
-//        edges.append(edge)
-//
-//    }
-//
-//    func addEdges(edgesArray: [GraphEdge]) {
-//        // add each edge to array
-//        for edge in edges { addEdge(edge) }
-//
-//        // build matrix for new data
-//        if let m = buildMatrix() { matrix = m }
-//    }
-//
+    // find route from entered array of minimum routes (result of func searchAllRoutesForPoint())
+    func findRouteInGraph(from start: Int, to end: Int, minRoutesFromStart: [Double]) -> [(id: Int, weight: Double)]? {
+        // create copy of array
+        var minRoutes = minRoutesFromStart
+        // erase number in start
+        minRoutes[start] = 0
+        // start vertex number (we are moving from end to start)
+        var stepItem = end
+        // full route
+        var route:[Int] = [stepItem]
+        var weights:[Double] = []
+        
+        while (stepItem != start) {
+            
+            // how much steps are from current position (stepItem) to start
+            let valueOfRouteToStart = minRoutes[stepItem]
+            
+            // column in which we will find 1 step from end to start
+            guard let column = matrix.getColumn(index: stepItem) else { return nil }
+            
+            for (index, value) in column.enumerated() where value != 0 {
+                
+                if minRoutes[index] == valueOfRouteToStart - value {
+                    route.append(index)
+                    weights.append(value)
+                    stepItem = index
+                }
+            }
+        }
+        // reverse array
+        let stationsOnRoute: [Int] = route.reversed()
+        // reverse weights
+        let stationWeights: [Double] = weights.reversed()
+        // try get 1st element
+        guard let startId = stationsOnRoute.first else { return nil }
+        // create result array
+        var result: [(Int, Double)] = [(startId, 0.0)]
+        // fill result array
+        for i in 0..<stationWeights.count {
+            result.append((stationsOnRoute[i+1], stationWeights[i]))
+        }
+        
+        return result
+    }
 }

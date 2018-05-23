@@ -1,19 +1,21 @@
 //
 //  Matrix.swift
-//  test-wave-algoritm
+//  test-graph
 //
-//  Created by Роман Мисников on 09.05.2018.
+//  Created by Роман Мисников on 23.05.2018.
 //  Copyright © 2018 Роман Мисников. All rights reserved.
 //
 
 import Foundation
 
 class Matrix<T> {
-      
-    var matrix:[[T]] = []
+    
+    // MARK: - Properties
+    var array:[[T]] = []
     public private(set) var rows: Int = 0
     public private(set) var columns: Int = 0
     
+    // MARK: - Initialization
     // конструктор
     init (columns: Int, rows: Int, with repeatingElement: T) {
         
@@ -25,55 +27,50 @@ class Matrix<T> {
         // create array of "row"-s
         let matrix = Array(repeating: row, count: rows)
         
-        self.matrix = matrix
+        self.array = matrix
     }
-
+    
     // инициализация сразу матрицей
     init (_ matrix: [[T]]) {
-
+        
         guard matrix.count > 0 else { return }
         guard matrix[0].count > 0 else { return }
         
-        self.matrix = matrix
+        self.array = matrix
         self.rows = matrix.count
         self.columns = matrix[0].count
     }
     
+    // MARK: - Subscripting
     // add subscripting to allow access to matrix by matrix[i] OR matrix[i][j]
     subscript(column: Int, row: Int) -> T {
         
         get {
             assert(indexIsValid(column: column, row: row), "Index out of range")
-            return matrix[row][column]
+            return array[row][column]
         }
         set {
             assert(indexIsValid(column: column, row: row), "Index out of range")
-            matrix[row][column] = newValue
+            array[row][column] = newValue
         }
     }
     
     subscript(point: Point) -> T {
-    
+        
         get {
             assert(indexIsValid(column: point.x, row: point.y), "Index out of range")
-            return matrix[point.y][point.x]
+            return array[point.y][point.x]
         }
         set {
             assert(indexIsValid(column: point.x, row: point.y), "Index out of range")
-            matrix[point.y][point.x] = newValue
+            array[point.y][point.x] = newValue
         }
     }
     
+    // MARK: - Methods
     // test entered index
     func indexIsValid(column: Int, row: Int) -> Bool {
         return row >= 0 && row < rows && column >= 0 && column < columns
-    }
-    
-    // вывод значений матрицы в консоль
-    func printSimpleMatrix() {
-        for item in matrix {
-            print(item)
-        }
     }
     
     // взять отдельный столбец
@@ -97,9 +94,17 @@ class Matrix<T> {
         guard index < rows else { return nil }
         guard index >= 0 else { return nil }
         
-        return matrix[index]
+        return array[index]
     }
     
+    // вывод значений матрицы в консоль
+    func printSimpleMatrix() {
+        for item in array {
+            print(item)
+        }
+    }
+    
+    // MARK: - Print
     func printFormatMatrix(number: Int) {
         // Example: printFormatMatrix(number: 3)
         //    -1 -1 -1 -1 -1 -1
@@ -109,22 +114,22 @@ class Matrix<T> {
         
         for i in 0..<rows {
             for j in 0..<columns{
-                let temp = matrix[i][j]
+                let temp = array[i][j]
                 let stringTemp = "\(temp)"
                 let charCnt = stringTemp.count
                 
                 guard number >= charCnt else { return }
                 let spacesCnt = number - charCnt
-                let outNumber = String(Array(repeating: " ", count: spacesCnt)) + stringTemp 
+                let outNumber = String(Array(repeating: " ", count: spacesCnt)) + stringTemp
                 
                 print(outNumber, separator: " ", terminator: "")
             }
             print("\n", terminator: "")
         }
-    
-    
-    
-    
+        
+        
+        
+        
     }
     
     

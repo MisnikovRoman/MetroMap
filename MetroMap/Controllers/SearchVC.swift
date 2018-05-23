@@ -11,12 +11,6 @@ import Alamofire
 
 class SearchVC: UIViewController {
     
-    struct MetroMapJson: Decodable {
-        let version: Double
-        let city: String
-        let graph: [GraphEdge]
-    }
-
     // Outlets
     @IBOutlet weak var fromStationTextFiled: UITextField!
     @IBOutlet weak var toStationTextFiled: UITextField!
@@ -59,24 +53,8 @@ class SearchVC: UIViewController {
 //        alert.addAction(action)
 //        self.present(alert, animated: true, completion: nil)
 //
-        
-        guard let url = URL(string: URL_METRO_MAP) else { return }
-        Alamofire.request(url).responseJSON { (response) in
-            
-            // if there is no error
-            guard response.error == nil else { return }
-            // try to convert received data to dictionary
-            guard let json = response.result.value as? Dictionary<String, Any> else { return }
-            // try get data
-            guard let data = response.data else { return }
-            
-            guard let metroMapJson = try? JSONDecoder().decode(MetroMapJson.self, from: data) else { return }
-            
-            MetroModel.instance.spbEdges = metroMapJson.graph
-            print(MetroModel.instance.graph)
-            
-            
-        }
+//
+//        }
     }
 }
 

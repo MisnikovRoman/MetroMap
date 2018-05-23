@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xbf-T4-n6C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ebu-rG-T4c">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -109,19 +109,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="от" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fr2-IG-5Oc">
-                                <rect key="frame" x="37.5" y="114" width="300" height="30"/>
+                                <rect key="frame" x="37.5" y="84" width="300" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="до" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="znd-NP-Xyg">
-                                <rect key="frame" x="37.5" y="167" width="300" height="30"/>
+                                <rect key="frame" x="37.5" y="137" width="300" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S95-Pp-Cex">
-                                <rect key="frame" x="0.0" y="277" width="375" height="390"/>
+                                <rect key="frame" x="0.0" y="247" width="375" height="420"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stationTableViewCell" id="WwF-aX-abo" customClass="StationCell" customModule="MetroMap" customModuleProvider="target">
@@ -170,41 +170,54 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3OB-Mg-8Cw">
-                                <rect key="frame" x="166" y="222" width="42" height="30"/>
+                                <rect key="frame" x="166" y="192" width="42" height="30"/>
                                 <state key="normal" title="найти"/>
+                                <connections>
+                                    <action selector="searchBtnPressed:" destination="xbf-T4-n6C" eventType="touchUpInside" id="6DC-AM-R0A"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Расчет маршрута между станциями Петербургского метрополитена" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDn-XL-xpL">
-                                <rect key="frame" x="0.0" y="40" width="375" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Fr2-IG-5Oc" firstAttribute="top" secondItem="FDn-XL-xpL" secondAttribute="bottom" constant="33" id="0OY-oq-iQ2"/>
-                            <constraint firstItem="znd-NP-Xyg" firstAttribute="width" secondItem="Fr2-IG-5Oc" secondAttribute="width" id="5bM-W3-6UV"/>
-                            <constraint firstItem="FDn-XL-xpL" firstAttribute="top" secondItem="fj1-Gp-UFU" secondAttribute="top" constant="20" id="ByR-dX-wYy"/>
-                            <constraint firstItem="3OB-Mg-8Cw" firstAttribute="top" secondItem="znd-NP-Xyg" secondAttribute="bottom" constant="25" id="Db5-ST-dsv"/>
-                            <constraint firstItem="Fr2-IG-5Oc" firstAttribute="centerX" secondItem="FDn-XL-xpL" secondAttribute="centerX" id="FXI-DB-SRl"/>
-                            <constraint firstItem="FDn-XL-xpL" firstAttribute="leading" secondItem="fj1-Gp-UFU" secondAttribute="leading" id="IMr-G9-lkZ"/>
-                            <constraint firstItem="3OB-Mg-8Cw" firstAttribute="centerX" secondItem="znd-NP-Xyg" secondAttribute="centerX" id="Og2-mI-DOe"/>
+                            <constraint firstItem="Fr2-IG-5Oc" firstAttribute="centerX" secondItem="UPZ-L1-mhh" secondAttribute="centerX" id="5p5-8j-vI3"/>
+                            <constraint firstItem="znd-NP-Xyg" firstAttribute="top" secondItem="Fr2-IG-5Oc" secondAttribute="bottom" constant="23" id="BDi-VW-87H"/>
+                            <constraint firstItem="znd-NP-Xyg" firstAttribute="trailing" secondItem="Fr2-IG-5Oc" secondAttribute="trailing" id="NOk-ag-1QO"/>
                             <constraint firstItem="S95-Pp-Cex" firstAttribute="top" secondItem="3OB-Mg-8Cw" secondAttribute="bottom" constant="25" id="Plz-Zh-gd8"/>
                             <constraint firstItem="S95-Pp-Cex" firstAttribute="trailing" secondItem="fj1-Gp-UFU" secondAttribute="trailing" id="Q8h-zS-Wuo"/>
-                            <constraint firstItem="fj1-Gp-UFU" firstAttribute="trailing" secondItem="FDn-XL-xpL" secondAttribute="trailing" id="XH5-pJ-ovc"/>
-                            <constraint firstItem="znd-NP-Xyg" firstAttribute="centerX" secondItem="Fr2-IG-5Oc" secondAttribute="centerX" id="YAF-8P-Jym"/>
+                            <constraint firstItem="3OB-Mg-8Cw" firstAttribute="centerX" secondItem="UPZ-L1-mhh" secondAttribute="centerX" id="Z48-EE-FxP"/>
+                            <constraint firstItem="Fr2-IG-5Oc" firstAttribute="top" secondItem="fj1-Gp-UFU" secondAttribute="top" constant="20" id="ZEN-cq-SVB"/>
+                            <constraint firstItem="znd-NP-Xyg" firstAttribute="leading" secondItem="Fr2-IG-5Oc" secondAttribute="leading" id="ZiE-V0-1vV"/>
                             <constraint firstItem="Fr2-IG-5Oc" firstAttribute="width" secondItem="UPZ-L1-mhh" secondAttribute="width" multiplier="0.8" id="gm1-HO-hZF"/>
                             <constraint firstItem="S95-Pp-Cex" firstAttribute="leading" secondItem="fj1-Gp-UFU" secondAttribute="leading" id="n7P-m1-90R"/>
                             <constraint firstItem="S95-Pp-Cex" firstAttribute="bottom" secondItem="fj1-Gp-UFU" secondAttribute="bottom" id="qd4-5Z-kl8"/>
-                            <constraint firstItem="znd-NP-Xyg" firstAttribute="top" secondItem="Fr2-IG-5Oc" secondAttribute="bottom" constant="23" id="sUu-3J-Q0z"/>
+                            <constraint firstItem="3OB-Mg-8Cw" firstAttribute="top" secondItem="znd-NP-Xyg" secondAttribute="bottom" constant="25" id="ycz-V6-vi3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fj1-Gp-UFU"/>
                     </view>
+                    <navigationItem key="navigationItem" id="g1k-JV-SK5"/>
                     <connections>
                         <outlet property="tableView" destination="S95-Pp-Cex" id="nGa-Ji-WM9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Msp-da-CEC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2098.4000000000001" y="132.68365817091455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Tni-Tb-lVq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ebu-rG-T4c" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3bo-4l-2Tt">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xbf-T4-n6C" kind="relationship" relationship="rootViewController" id="pr9-4R-sfN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1RM-4V-s8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1159.2" y="132.68365817091455"/>
         </scene>
