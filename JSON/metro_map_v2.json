@@ -46,53 +46,52 @@
   ],
   "connections": [
     {
-      "start": "Невский проспект",
-      "end": "Сенная площадь",
+      "startId": 0,
+      "endId": 1,
       "weight": 2,
       "oriented": false
     },
     {
-      "start": "Сенная площадь",
-      "end": "Технологический институт",
+      "startId": 1,
+      "endId": 2,
       "weight": 3,
       "oriented": false
     },
     {
-      "start": "Сенная площадь",
-      "end": "Садовая",
+      "startId": 1,
+      "endId": 4,
       "weight": 2,
       "oriented": false
     },
     {
-      "start": "Сенная площадь",
-      "end": "Спасская",
+      "startId": 1,
+      "endId": 5,
       "weight": 2,
       "oriented": false
     },
     {
-      "start": "Адмиралтейская",
-      "end": "Садовая",
+      "startId": 3,
+      "endId": 4,
       "weight": 4,
       "oriented": false
     },
     {
-      "start": "Садовая",
-      "end": "Спасская",
+      "startId": 4,
+      "endId": 5,
       "weight": 2,
       "oriented": false
     },
     {
-      "start": "Садовая",
-      "end": "Звенигородская",
+      "startId": 4,
+      "endId": 6,
       "weight": 3,
       "oriented": false
     },
     {
-      "start": "Спасская",
-      "end": "Лиговский проспект",
+      "startId": 5,
+      "endId": 7,
       "weight": 2,
       "oriented": false
     }
-
   ]
 }
