@@ -128,7 +128,9 @@ class Graph: CustomStringConvertible {
         // reverse array
         let stationsOnRoute: [Int] = route.reversed()
         // reverse weights
-        let stationWeights: [Double] = weights.reversed()
+        var stationWeights: [Double] = weights.reversed()
+        // ⚠️ comment to have time beetween stations (not from start)
+        for i in 1..<stationWeights.count { stationWeights[i] += stationWeights[i-1] }
         // try get 1st element
         guard let startId = stationsOnRoute.first else { return nil }
         // create result array

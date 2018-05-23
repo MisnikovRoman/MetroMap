@@ -8,8 +8,10 @@
 
 import Foundation
 
+var route: [(id: Int, weight: Double)] = []
+
 struct MetroModel: Decodable {
-    let version: Int
+    let version: Double
     let city: String
     let stations: [Station]
     let connections: [StationConnection]

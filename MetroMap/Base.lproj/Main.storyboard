@@ -196,6 +196,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="g1k-JV-SK5"/>
                     <connections>
+                        <outlet property="endTextField" destination="znd-NP-Xyg" id="iA5-fO-yP6"/>
+                        <outlet property="startTextField" destination="Fr2-IG-5Oc" id="IUB-pr-GtO"/>
                         <outlet property="tableView" destination="S95-Pp-Cex" id="nGa-Ji-WM9"/>
                     </connections>
                 </viewController>
