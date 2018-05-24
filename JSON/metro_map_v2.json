@@ -1,5 +1,5 @@
 {
-  "version": 0.03,
+  "version": 0.04,
   "city": "Saint Petersburg",
   "stations": [
     {
@@ -706,13 +706,13 @@
     {
       "startId": 48,
       "endId": 49,
-      "weight": 0,
+      "weight": 99,
       "oriented": false
     },
     {
       "startId": 49,
       "endId": 50,
-      "weight": 0,
+      "weight": 99,
       "oriented": false
     },
     {
@@ -760,31 +760,31 @@
     {
       "startId": 58,
       "endId": 59,
-      "weight": 0,
+      "weight": 99,
       "oriented": false
     },
     {
       "startId": 59,
       "endId": 60,
-      "weight": 0,
+      "weight": 99,
       "oriented": false
     },
     {
       "startId": 61,
       "endId": 62,
-      "weight": 0,
+      "weight": 99,
       "oriented": false
     },
     {
       "startId": 62,
       "endId": 63,
-      "weight": 0,
+      "weight": 99,
       "oriented": false
     },
     {
       "startId": 63,
       "endId": 64,
-      "weight": 0,
+      "weight": 99,
       "oriented": false
     },
     {
@@ -856,37 +856,37 @@
     {
       "startId": 76,
       "endId": 77,
-      "weight": 0,
+      "weight": 99,
       "oriented": false
     },
     {
       "startId": 77,
       "endId": 78,
-      "weight": 0,
+      "weight": 99,
       "oriented": false
     },
     {
       "startId": 78,
       "endId": 79,
-      "weight": 0,
+      "weight": 99,
       "oriented": false
     },
     {
       "startId": 79,
       "endId": 80,
-      "weight": 0,
+      "weight": 99,
       "oriented": false
     },
     {
       "startId": 80,
       "endId": 81,
-      "weight": 0,
+      "weight": 99,
       "oriented": false
     },
     {
       "startId": 3,
       "endId": 77,
-      "weight": 0,
+      "weight": 99,
       "oriented": false
     },
     {
@@ -916,7 +916,7 @@
     {
       "startId": 25,
       "endId": 79,
-      "weight": 0,
+      "weight": 99,
       "oriented": false
     },
     {
@@ -958,7 +958,7 @@
     {
       "startId": 67,
       "endId": 81,
-      "weight": 0,
+      "weight": 99,
       "oriented": false
     }
   ]

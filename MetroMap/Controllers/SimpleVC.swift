@@ -47,7 +47,10 @@ class SimpleVC: UIViewController {
             guard let metroMapModel = try? JSONDecoder().decode(MetroModel.self, from: data) else { return }
             self.metroModel = metroMapModel
             let graph = Graph(metroMapModel.stations, metroMapModel.connections)
-            guard let minRoutes = graph.searchAllRoutesForPoint(pointIndex: startIndex) else { return }
+            guard let minRoutes = graph.searchAllRoutesForPoint(pointIndex: startIndex) else {
+                print("-> NO MIN ROUTES")
+                return
+            }
             guard let newRoute = graph.findRouteInGraph(from: startIndex, to: endIndex, minRoutesFromStart: minRoutes) else { return }
             print(newRoute)
             route = newRoute
