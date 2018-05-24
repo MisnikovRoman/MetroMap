@@ -81,6 +81,12 @@ extension SimpleVC: UITableViewDelegate, UITableViewDataSource {
             color = UIColor(red: 139/255, green: 0/255, blue: 255/255, alpha: 1)
         case "orange":
             color = UIColor(red: 255/255, green: 165/255, blue: 0/255, alpha: 1)
+        case "red" :
+            color = UIColor(red: 255/255, green: 36/255, blue: 0/255, alpha: 1)
+        case "green" :
+            color = UIColor(red: 0/255, green: 165/255, blue: 80/255, alpha: 1)
+        case "brown" :
+            color = UIColor(red: 149/255, green: 80/255, blue: 12/255, alpha: 1)
         default:
             color = .black
         }
