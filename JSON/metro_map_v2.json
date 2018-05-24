@@ -1,5 +1,5 @@
 {
-  "version": 0.04,
+  "version": 0.05,
   "city": "Saint Petersburg",
   "stations": [
     {
@@ -33,12 +33,12 @@
       "id": 5
     },
     {
-      "name": "Технологический институт 1",
+      "name": "Технологический инст. 1",
       "color": "red",
       "id": 6
     },
     {
-      "name": "Технологический институт 2",
+      "name": "Технологический инст. 1(2)",
       "color": "red",
       "id": 7
     },
@@ -138,12 +138,12 @@
       "id": 26
     },
     {
-      "name": "Технологический институт 1",
+      "name": "Технологический инст. 2",
       "color": "blue",
       "id": 27
     },
     {
-      "name": "Технологический институт 2",
+      "name": "Технологический инст. 2(2)",
       "color": "blue",
       "id": 28
     },
@@ -573,24 +573,24 @@
     },
     {
       "startId": 26,
-      "endId": 27,
+      "endId": 28,
       "weight": 2,
       "oriented": true
     },
     {
-      "startId": 27,
+      "startId": 28,
       "endId": 29,
       "weight": 3,
       "oriented": true
     },
     {
       "startId": 29,
-      "endId": 28,
+      "endId": 27,
       "weight": 3,
       "oriented": true
     },
     {
-      "startId": 28,
+      "startId": 27,
       "endId": 26,
       "weight": 2,
       "oriented": true
