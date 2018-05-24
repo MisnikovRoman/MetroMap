@@ -1,49 +1,419 @@
 {
-  "version": 0.02,
+  "version": 0.03,
   "city": "Saint Petersburg",
   "stations": [
-      {
-      "name": "Невский проспект",
-      "color": "blue",
+    {
+      "name": "Проспект ветеранов",
+      "color": "red",
       "id": 0
+    },
+    {
+      "name": "Ленинский проспект",
+      "color": "red",
+      "id": 1
+    },
+    {
+      "name": "Автово",
+      "color": "red",
+      "id": 2
+    },
+    {
+      "name": "Кировский завод",
+      "color": "red",
+      "id": 3
+    },
+    {
+      "name": "Нарвская",
+      "color": "red",
+      "id": 4
+    },
+    {
+      "name": "Балтийская",
+      "color": "red",
+      "id": 5
+    },
+    {
+      "name": "Технологический институт 1",
+      "color": "red",
+      "id": 6
+    },
+    {
+      "name": "Технологический институт 2",
+      "color": "red",
+      "id": 7
+    },
+    {
+      "name": "Пушкинская",
+      "color": "red",
+      "id": 8
+    },
+    {
+      "name": "Владимирская",
+      "color": "red",
+      "id": 9
+    },
+    {
+      "name": "Площадь восстания",
+      "color": "red",
+      "id": 10
+    },
+    {
+      "name": "Чернышевская",
+      "color": "red",
+      "id": 11
+    },
+    {
+      "name": "Площадь Ленина",
+      "color": "red",
+      "id": 12
+    },
+    {
+      "name": "Выборгская",
+      "color": "red",
+      "id": 13
+    },
+    {
+      "name": "Лесная",
+      "color": "red",
+      "id": 14
+    },
+    {
+      "name": "Площадь Мужества",
+      "color": "red",
+      "id": 15
+    },
+    {
+      "name": "Политехническая",
+      "color": "red",
+      "id": 16
+    },
+    {
+      "name": "Академическая",
+      "color": "red",
+      "id": 17
+    },
+    {
+      "name": "Гражданский проспект",
+      "color": "red",
+      "id": 18
+    },
+    {
+      "name": "Девяткино",
+      "color": "red",
+      "id": 19
+    },
+    {
+      "name": "Купчино",
+      "color": "blue",
+      "id": 20
+    },
+    {
+      "name": "Звёздная",
+      "color": "blue",
+      "id": 21
+    },
+    {
+      "name": "Московская",
+      "color": "blue",
+      "id": 22
+    },
+    {
+      "name": "Парк Победы",
+      "color": "blue",
+      "id": 23
+    },
+    {
+      "name": "Электросила",
+      "color": "blue",
+      "id": 24
+    },
+    {
+      "name": "Московские ворота",
+      "color": "blue",
+      "id": 25
+    },
+    {
+      "name": "Фрунзенская",
+      "color": "blue",
+      "id": 26
+    },
+    {
+      "name": "Технологический институт 1",
+      "color": "blue",
+      "id": 27
+    },
+    {
+      "name": "Технологический институт 2",
+      "color": "blue",
+      "id": 28
     },
     {
       "name": "Сенная площадь",
       "color": "blue",
-      "id": 1
+      "id": 29
     },
     {
-      "name": "Технологические институт",
+      "name": "Невский проспект",
       "color": "blue",
-      "id": 2
+      "id": 30
     },
     {
-      "name": "Адмиралтейская",
-      "color": "purple",
-      "id": 3
+      "name": "Горьковская",
+      "color": "blue",
+      "id": 31
     },
     {
-      "name": "Садовая",
-      "color": "purple",
-      "id": 4
+      "name": "Петроградская",
+      "color": "blue",
+      "id": 32
     },
     {
-      "name": "Спасская",
+      "name": "Чёрная речка",
+      "color": "blue",
+      "id": 33
+    },
+    {
+      "name": "Пионерская",
+      "color": "blue",
+      "id": 34
+    },
+    {
+      "name": "Удельная",
+      "color": "blue",
+      "id": 35
+    },
+    {
+      "name": "Озерки",
+      "color": "blue",
+      "id": 36
+    },
+    {
+      "name": "Проспект просвещения",
+      "color": "blue",
+      "id": 37
+    },
+    {
+      "name": "Парнас",
+      "color": "blue",
+      "id": 38
+    },
+    {
+      "name": "Рыбацкое",
+      "color": "green",
+      "id": 39
+    },
+    {
+      "name": "Обухово",
+      "color": "green",
+      "id": 40
+    },
+    {
+      "name": "Пролетарская",
+      "color": "green",
+      "id": 41
+    },
+    {
+      "name": "Ломоносовская",
+      "color": "green",
+      "id": 42
+    },
+    {
+      "name": "Елизаровская",
+      "color": "green",
+      "id": 43
+    },
+    {
+      "name": "Площадь Александра Невского",
+      "color": "green",
+      "id": 44
+    },
+    {
+      "name": "Маяковская",
+      "color": "green",
+      "id": 45
+    },
+    {
+      "name": "Гостинный двор",
+      "color": "green",
+      "id": 46
+    },
+    {
+      "name": "Василеостровская",
+      "color": "green",
+      "id": 47
+    },
+    {
+      "name": "Приморская",
+      "color": "green",
+      "id": 48
+    },
+    {
+      "name": "Новокрестовская",
+      "color": "green",
+      "id": 49
+    },
+    {
+      "name": "Беговая",
+      "color": "green",
+      "id": 50
+    },
+    {
+      "name": "Улица Дыбенко",
       "color": "orange",
-      "id": 5
+      "id": 51
     },
     {
-      "name": "Звенигородская",
-      "color": "purple",
-      "id": 6
+      "name": "Проспект Большевиков",
+      "color": "orange",
+      "id": 52
+    },
+    {
+      "name": "Ладожская",
+      "color": "orange",
+      "id": 53
+    },
+    {
+      "name": "Новочеркасская",
+      "color": "orange",
+      "id": 54
+    },
+    {
+      "name": "Площадь Александра Невского",
+      "color": "orange",
+      "id": 55
     },
     {
       "name": "Лиговский проспект",
       "color": "orange",
-      "id": 7
+      "id": 56
+    },
+    {
+      "name": "Достоевская",
+      "color": "orange",
+      "id": 57
+    },
+    {
+      "name": "Спасская",
+      "color": "orange",
+      "id": 58
+    },
+    {
+      "name": "Театральная",
+      "color": "orange",
+      "id": 59
+    },
+    {
+      "name": "Горный институт",
+      "color": "orange",
+      "id": 60
+    },
+    {
+      "name": "Шушары",
+      "color": "purple",
+      "id": 61
+    },
+    {
+      "name": "Дунайская",
+      "color": "purple",
+      "id": 62
+    },
+    {
+      "name": "Проспект славы",
+      "color": "purple",
+      "id": 63
+    },
+    {
+      "name": "Международная",
+      "color": "purple",
+      "id": 64
+    },
+    {
+      "name": "Бухарестская",
+      "color": "purple",
+      "id": 65
+    },
+    {
+      "name": "Волковская",
+      "color": "purple",
+      "id": 66
+    },
+    {
+      "name": "Обводный канал",
+      "color": "purple",
+      "id": 67
+    },
+    {
+      "name": "Звенигородская",
+      "color": "purple",
+      "id": 68
+    },
+    {
+      "name": "Садовая",
+      "color": "purple",
+      "id": 69
+    },
+    {
+      "name": "Адмиралтейская",
+      "color": "purple",
+      "id": 70
+    },
+    {
+      "name": "Спортивная",
+      "color": "purple",
+      "id": 71
+    },
+    {
+      "name": "Чкаловская",
+      "color": "purple",
+      "id": 72
+    },
+    {
+      "name": "Крестовский остров",
+      "color": "purple",
+      "id": 73
+    },
+    {
+      "name": "Старая деревня",
+      "color": "purple",
+      "id": 74
+    },
+    {
+      "name": "Комендантский проспект",
+      "color": "purple",
+      "id": 75
+    },
+    {
+      "name": "Юго-Западная",
+      "color": "brown",
+      "id": 76
+    },
+    {
+      "name": "Путиловская",
+      "color": "brown",
+      "id": 77
+    },
+    {
+      "name": "Броневая",
+      "color": "brown",
+      "id": 78
+    },
+    {
+      "name": "Заставская",
+      "color": "brown",
+      "id": 79
+    },
+    {
+      "name": "Боровая",
+      "color": "brown",
+      "id": 80
+    },
+    {
+      "name": "Каретная",
+      "color": "brown",
+      "id": 81
     }
 
-  ],
+   ],
   "connections": [
     {
       "startId": 0,
@@ -58,14 +428,8 @@
       "oriented": false
     },
     {
-      "startId": 1,
-      "endId": 4,
-      "weight": 2,
-      "oriented": false
-    },
-    {
-      "startId": 1,
-      "endId": 5,
+      "startId": 2,
+      "endId": 3,
       "weight": 2,
       "oriented": false
     },
@@ -78,12 +442,6 @@
     {
       "startId": 4,
       "endId": 5,
-      "weight": 2,
-      "oriented": false
-    },
-    {
-      "startId": 4,
-      "endId": 6,
       "weight": 3,
       "oriented": false
     },
@@ -91,6 +449,516 @@
       "startId": 5,
       "endId": 7,
       "weight": 2,
+      "oriented": true
+    },
+    {
+      "startId": 7,
+      "endId": 8,
+      "weight": 2,
+      "oriented": true
+    },
+    {
+      "startId": 8,
+      "endId": 6,
+      "weight": 2,
+      "oriented": true
+    },
+    {
+      "startId": 6,
+      "endId": 5,
+      "weight": 2,
+      "oriented": true
+    },
+    {
+      "startId": 8,
+      "endId": 9,
+      "weight": 2,
+      "oriented": false
+    },
+    {
+      "startId": 9,
+      "endId": 10,
+      "weight": 2,
+      "oriented": false
+    },
+    {
+      "startId": 10,
+      "endId": 11,
+      "weight": 2,
+      "oriented": false
+    },
+    {
+      "startId": 11,
+      "endId": 12,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 12,
+      "endId": 13,
+      "weight": 2,
+      "oriented": false
+    },
+    {
+      "startId": 13,
+      "endId": 14,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 14,
+      "endId": 15,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 15,
+      "endId": 16,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 16,
+      "endId": 17,
+      "weight": 2,
+      "oriented": false
+    },
+    {
+      "startId": 17,
+      "endId": 18,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 18,
+      "endId": 19,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 20,
+      "endId": 21,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 21,
+      "endId": 22,
+      "weight": 4,
+      "oriented": false
+    },
+    {
+      "startId": 22,
+      "endId": 23,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 23,
+      "endId": 24,
+      "weight": 2,
+      "oriented": false
+    },
+    {
+      "startId": 24,
+      "endId": 25,
+      "weight": 2,
+      "oriented": false
+    },
+    {
+      "startId": 25,
+      "endId": 26,
+      "weight": 2,
+      "oriented": false
+    },
+    {
+      "startId": 26,
+      "endId": 27,
+      "weight": 2,
+      "oriented": true
+    },
+    {
+      "startId": 27,
+      "endId": 29,
+      "weight": 3,
+      "oriented": true
+    },
+    {
+      "startId": 29,
+      "endId": 28,
+      "weight": 3,
+      "oriented": true
+    },
+    {
+      "startId": 28,
+      "endId": 26,
+      "weight": 2,
+      "oriented": true
+    },
+    {
+      "startId": 29,
+      "endId": 30,
+      "weight": 2,
+      "oriented": false
+    },
+    {
+      "startId": 30,
+      "endId": 31,
+      "weight": 4,
+      "oriented": false
+    },
+    {
+      "startId": 31,
+      "endId": 32,
+      "weight": 2,
+      "oriented": false
+    },
+    {
+      "startId": 32,
+      "endId": 33,
+      "weight": 4,
+      "oriented": false
+    },
+    {
+      "startId": 33,
+      "endId": 34,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 34,
+      "endId": 35,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 35,
+      "endId": 36,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 36,
+      "endId": 37,
+      "weight": 2,
+      "oriented": false
+    },
+    {
+      "startId": 37,
+      "endId": 38,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 39,
+      "endId": 40,
+      "weight": 4,
+      "oriented": false
+    },
+    {
+      "startId": 40,
+      "endId": 41,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 41,
+      "endId": 42,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 42,
+      "endId": 43,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 43,
+      "endId": 44,
+      "weight": 5,
+      "oriented": false
+    },
+    {
+      "startId": 44,
+      "endId": 45,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 45,
+      "endId": 46,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 46,
+      "endId": 47,
+      "weight": 4,
+      "oriented": false
+    },
+    {
+      "startId": 47,
+      "endId": 48,
+      "weight": 4,
+      "oriented": false
+    },
+    {
+      "startId": 48,
+      "endId": 49,
+      "weight": 0,
+      "oriented": false
+    },
+    {
+      "startId": 49,
+      "endId": 50,
+      "weight": 0,
+      "oriented": false
+    },
+    {
+      "startId": 51,
+      "endId": 52,
+      "weight": 2,
+      "oriented": false
+    },
+    {
+      "startId": 52,
+      "endId": 53,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 53,
+      "endId": 54,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 54,
+      "endId": 55,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 55,
+      "endId": 56,
+      "weight": 2,
+      "oriented": false
+    },
+    {
+      "startId": 56,
+      "endId": 57,
+      "weight": 2,
+      "oriented": false
+    },
+    {
+      "startId": 57,
+      "endId": 58,
+      "weight": 4,
+      "oriented": false
+    },
+    {
+      "startId": 58,
+      "endId": 59,
+      "weight": 0,
+      "oriented": false
+    },
+    {
+      "startId": 59,
+      "endId": 60,
+      "weight": 0,
+      "oriented": false
+    },
+    {
+      "startId": 61,
+      "endId": 62,
+      "weight": 0,
+      "oriented": false
+    },
+    {
+      "startId": 62,
+      "endId": 63,
+      "weight": 0,
+      "oriented": false
+    },
+    {
+      "startId": 63,
+      "endId": 64,
+      "weight": 0,
+      "oriented": false
+    },
+    {
+      "startId": 64,
+      "endId": 65,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 65,
+      "endId": 66,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 66,
+      "endId": 67,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 67,
+      "endId": 68,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 68,
+      "endId": 69,
+      "weight": 4,
+      "oriented": false
+    },
+    {
+      "startId": 69,
+      "endId": 70,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 70,
+      "endId": 71,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 71,
+      "endId": 72,
+      "weight": 2,
+      "oriented": false
+    },
+    {
+      "startId": 72,
+      "endId": 73,
+      "weight": 4,
+      "oriented": false
+    },
+    {
+      "startId": 73,
+      "endId": 74,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 74,
+      "endId": 75,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 76,
+      "endId": 77,
+      "weight": 0,
+      "oriented": false
+    },
+    {
+      "startId": 77,
+      "endId": 78,
+      "weight": 0,
+      "oriented": false
+    },
+    {
+      "startId": 78,
+      "endId": 79,
+      "weight": 0,
+      "oriented": false
+    },
+    {
+      "startId": 79,
+      "endId": 80,
+      "weight": 0,
+      "oriented": false
+    },
+    {
+      "startId": 80,
+      "endId": 81,
+      "weight": 0,
+      "oriented": false
+    },
+    {
+      "startId": 3,
+      "endId": 77,
+      "weight": 0,
+      "oriented": false
+    },
+    {
+      "startId": 6,
+      "endId": 7,
+      "weight": 1,
+      "oriented": false
+    },
+    {
+      "startId": 8,
+      "endId": 68,
+      "weight": 2,
+      "oriented": false
+    },
+    {
+      "startId": 9,
+      "endId": 57,
+      "weight": 2,
+      "oriented": false
+    },
+    {
+      "startId": 10,
+      "endId": 45,
+      "weight": 2,
+      "oriented": false
+    },
+    {
+      "startId": 25,
+      "endId": 79,
+      "weight": 0,
+      "oriented": false
+    },
+    {
+      "startId": 27,
+      "endId": 28,
+      "weight": 1,
+      "oriented": false
+    },
+    {
+      "startId": 29,
+      "endId": 69,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 29,
+      "endId": 58,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 30,
+      "endId": 46,
+      "weight": 2,
+      "oriented": false
+    },
+    {
+      "startId": 44,
+      "endId": 55,
+      "weight": 2,
+      "oriented": false
+    },
+    {
+      "startId": 58,
+      "endId": 69,
+      "weight": 3,
+      "oriented": false
+    },
+    {
+      "startId": 67,
+      "endId": 81,
+      "weight": 0,
       "oriented": false
     }
   ]

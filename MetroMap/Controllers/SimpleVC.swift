@@ -67,7 +67,7 @@ extension SimpleVC: UITableViewDelegate, UITableViewDataSource {
         let stationNumber = route[indexPath.row].id
         let stationName = metroModel.stations[stationNumber].name
         cell.stationNameLbl.text = "\(stationName)"
-        cell.timeLbl.text = "\(route[indexPath.row].weight) мин."
+        cell.timeLbl.text = "\(Int(route[indexPath.row].weight)) мин."
         
         let colorName = metroModel.stations[stationNumber].color
         let color: UIColor
