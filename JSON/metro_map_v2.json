@@ -1,5 +1,5 @@
 {
-  "version": 0.05,
+  "version": 0.06,
   "city": "Saint Petersburg",
   "stations": [
     {
@@ -101,7 +101,7 @@
       "name": "Девяткино",
       "color": "red",
       "id": 19
-    },    
+    },
     {
       "name": "Купчино",
       "color": "blue",
@@ -256,7 +256,7 @@
       "name": "Беговая",
       "color": "green",
       "id": 50
-    },  
+    },
     {
       "name": "Улица Дыбенко",
       "color": "orange",
@@ -306,7 +306,7 @@
       "name": "Горный институт",
       "color": "orange",
       "id": 60
-    }, 
+    },
     {
       "name": "Шушары",
       "color": "purple",
@@ -412,7 +412,7 @@
       "color": "brown",
       "id": 81
     }
-      
+
    ],
   "connections": [
     {
@@ -706,13 +706,13 @@
     {
       "startId": 48,
       "endId": 49,
-      "weight": 99,
+      "weight": 4,
       "oriented": false
     },
     {
       "startId": 49,
       "endId": 50,
-      "weight": 99,
+      "weight": 4,
       "oriented": false
     },
     {
@@ -948,25 +948,25 @@
       "endId": 55,
       "weight": 2,
       "oriented": false
-    }, 
+    },
     {
       "startId": 58,
       "endId": 69,
       "weight": 3,
       "oriented": false
-    }, 
+    },
     {
       "startId": 67,
       "endId": 81,
       "weight": 99,
       "oriented": false
-    }, 
+    },
     {
       "startId": 6,
       "endId": 27,
       "weight": 1,
       "oriented": false
-    }, 
+    },
     {
       "startId": 7,
       "endId": 28,
