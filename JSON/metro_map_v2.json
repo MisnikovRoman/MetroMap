@@ -3,7 +3,7 @@
   "city": "Saint Petersburg",
   "stations": [
     {
-      "name": "Проспект ветеранов",
+      "name": "Проспект Ветеранов",
       "color": "red",
       "id": 0
     },
