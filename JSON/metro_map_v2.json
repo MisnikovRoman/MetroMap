@@ -1,5 +1,5 @@
 {
-  "version": 0.06,
+  "version": 0.07,
   "city": "Saint Petersburg",
   "stations": [
     {
@@ -462,6 +462,18 @@
       "endId": 6,
       "weight": 2,
       "oriented": true
+    },
+    {
+      "startId": 6,
+      "endId": 28,
+      "weight": 2,
+      "oriented": false
+    },
+    {
+      "startId": 7,
+      "endId": 27,
+      "weight": 2,
+      "oriented": false
     },
     {
       "startId": 6,
