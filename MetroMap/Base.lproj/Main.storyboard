@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -100,7 +101,7 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
-        <!--SimpleVC-->
+        <!--Найти маршрут-->
         <scene sceneID="RpC-61-5N5">
             <objects>
                 <viewController id="xbf-T4-n6C" customClass="SimpleVC" customModule="MetroMap" customModuleProvider="target" sceneMemberID="viewController">
@@ -109,23 +110,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="от" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fr2-IG-5Oc">
-                                <rect key="frame" x="37.5" y="84" width="300" height="30"/>
+                                <rect key="frame" x="8" y="80" width="175.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="до" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="znd-NP-Xyg">
-                                <rect key="frame" x="37.5" y="137" width="300" height="30"/>
+                                <rect key="frame" x="191.5" y="80" width="175.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S95-Pp-Cex">
-                                <rect key="frame" x="0.0" y="247" width="375" height="420"/>
+                                <rect key="frame" x="0.0" y="126" width="375" height="541"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stationTableViewCell" id="WwF-aX-abo" customClass="StationCell" customModule="MetroMap" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="routeTableViewCell" id="Yp1-Jd-tty" customClass="RouteCell" customModule="MetroMap" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yp1-Jd-tty" id="qFg-aW-GeS">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 мин." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88T-Ll-0Bb">
+                                                    <rect key="frame" x="31" y="4.5" width="313" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="88T-Ll-0Bb" firstAttribute="leading" secondItem="qFg-aW-GeS" secondAttribute="leadingMargin" constant="16" id="2on-fy-e6T"/>
+                                                <constraint firstItem="88T-Ll-0Bb" firstAttribute="centerY" secondItem="qFg-aW-GeS" secondAttribute="centerY" id="VZJ-Cr-d0X"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="88T-Ll-0Bb" secondAttribute="trailing" constant="16" id="ype-yV-axu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="resultLbl" destination="88T-Ll-0Bb" id="0zS-rm-CvE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="stationTableViewCell" id="WwF-aX-abo" customClass="StationCell" customModule="MetroMap" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WwF-aX-abo" id="K12-QF-ZGv">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -169,32 +194,29 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3OB-Mg-8Cw">
-                                <rect key="frame" x="166" y="192" width="42" height="30"/>
-                                <state key="normal" title="найти"/>
-                                <connections>
-                                    <action selector="searchBtnPressed:" destination="xbf-T4-n6C" eventType="touchUpInside" id="6DC-AM-R0A"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Fr2-IG-5Oc" firstAttribute="centerX" secondItem="UPZ-L1-mhh" secondAttribute="centerX" id="5p5-8j-vI3"/>
-                            <constraint firstItem="znd-NP-Xyg" firstAttribute="top" secondItem="Fr2-IG-5Oc" secondAttribute="bottom" constant="23" id="BDi-VW-87H"/>
-                            <constraint firstItem="znd-NP-Xyg" firstAttribute="trailing" secondItem="Fr2-IG-5Oc" secondAttribute="trailing" id="NOk-ag-1QO"/>
-                            <constraint firstItem="S95-Pp-Cex" firstAttribute="top" secondItem="3OB-Mg-8Cw" secondAttribute="bottom" constant="25" id="Plz-Zh-gd8"/>
+                            <constraint firstItem="znd-NP-Xyg" firstAttribute="leading" secondItem="Fr2-IG-5Oc" secondAttribute="trailing" constant="8" id="3mE-d5-LRs"/>
+                            <constraint firstItem="S95-Pp-Cex" firstAttribute="top" secondItem="znd-NP-Xyg" secondAttribute="bottom" constant="16" id="4bv-10-rQs"/>
+                            <constraint firstItem="Fr2-IG-5Oc" firstAttribute="top" secondItem="fj1-Gp-UFU" secondAttribute="top" constant="16" id="O10-3C-Z9s"/>
                             <constraint firstItem="S95-Pp-Cex" firstAttribute="trailing" secondItem="fj1-Gp-UFU" secondAttribute="trailing" id="Q8h-zS-Wuo"/>
-                            <constraint firstItem="3OB-Mg-8Cw" firstAttribute="centerX" secondItem="UPZ-L1-mhh" secondAttribute="centerX" id="Z48-EE-FxP"/>
-                            <constraint firstItem="Fr2-IG-5Oc" firstAttribute="top" secondItem="fj1-Gp-UFU" secondAttribute="top" constant="20" id="ZEN-cq-SVB"/>
-                            <constraint firstItem="znd-NP-Xyg" firstAttribute="leading" secondItem="Fr2-IG-5Oc" secondAttribute="leading" id="ZiE-V0-1vV"/>
-                            <constraint firstItem="Fr2-IG-5Oc" firstAttribute="width" secondItem="UPZ-L1-mhh" secondAttribute="width" multiplier="0.8" id="gm1-HO-hZF"/>
+                            <constraint firstItem="znd-NP-Xyg" firstAttribute="top" secondItem="fj1-Gp-UFU" secondAttribute="top" constant="16" id="Uok-az-k74"/>
+                            <constraint firstItem="Fr2-IG-5Oc" firstAttribute="width" secondItem="znd-NP-Xyg" secondAttribute="width" id="dro-jA-k7F"/>
+                            <constraint firstItem="fj1-Gp-UFU" firstAttribute="trailing" secondItem="znd-NP-Xyg" secondAttribute="trailing" constant="8" id="eKs-g9-cFi"/>
                             <constraint firstItem="S95-Pp-Cex" firstAttribute="leading" secondItem="fj1-Gp-UFU" secondAttribute="leading" id="n7P-m1-90R"/>
                             <constraint firstItem="S95-Pp-Cex" firstAttribute="bottom" secondItem="fj1-Gp-UFU" secondAttribute="bottom" id="qd4-5Z-kl8"/>
-                            <constraint firstItem="3OB-Mg-8Cw" firstAttribute="top" secondItem="znd-NP-Xyg" secondAttribute="bottom" constant="25" id="ycz-V6-vi3"/>
+                            <constraint firstItem="Fr2-IG-5Oc" firstAttribute="leading" secondItem="fj1-Gp-UFU" secondAttribute="leading" constant="8" id="yoq-09-6nw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fj1-Gp-UFU"/>
                     </view>
-                    <navigationItem key="navigationItem" id="g1k-JV-SK5"/>
+                    <navigationItem key="navigationItem" title="Найти маршрут" id="g1k-JV-SK5">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="search" id="e6d-dr-AbV">
+                            <connections>
+                                <action selector="searchBtnPressed:" destination="xbf-T4-n6C" id="027-3T-u2u"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="endTextField" destination="znd-NP-Xyg" id="iA5-fO-yP6"/>
                         <outlet property="startTextField" destination="Fr2-IG-5Oc" id="IUB-pr-GtO"/>

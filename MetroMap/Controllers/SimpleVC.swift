@@ -33,7 +33,7 @@ class SimpleVC: UIViewController {
     }
     
     // Buttons
-    @IBAction func searchBtnPressed(_ sender: UIButton) {
+    @IBAction func searchBtnPressed(_ sender: UIBarButtonItem) {
         
         guard let startText = startTextField.text else { return }
         guard let endText = endTextField.text else { return }
@@ -74,36 +74,48 @@ class SimpleVC: UIViewController {
 
 extension SimpleVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return route.count
+        return route.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: STATION_CELL) as! StationCell
         
-        let stationNumber = route[indexPath.row].id
-        let stationName = metroModel.stations[stationNumber].name
-        cell.stationNameLbl.text = "\(stationName)"
-        cell.timeLbl.text = "\(Int(route[indexPath.row].weight)) мин."
+        let row = indexPath.row
         
-        let colorName = metroModel.stations[stationNumber].color
-        let color: UIColor
-        switch colorName {
-        case "blue":
-            color = UIColor(red: 66/255, green: 170/255, blue: 255/255, alpha: 1)
-        case "purple":
-            color = UIColor(red: 139/255, green: 0/255, blue: 255/255, alpha: 1)
-        case "orange":
-            color = UIColor(red: 255/255, green: 165/255, blue: 0/255, alpha: 1)
-        case "red" :
-            color = UIColor(red: 255/255, green: 36/255, blue: 0/255, alpha: 1)
-        case "green" :
-            color = UIColor(red: 0/255, green: 165/255, blue: 80/255, alpha: 1)
-        case "brown" :
-            color = UIColor(red: 149/255, green: 80/255, blue: 12/255, alpha: 1)
-        default:
-            color = .black
+        if row == 0 {
+            guard let routeTime = route.last?.weight, routeTime > 0 else { return UITableViewCell() }
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: ROUTE_CELL) as! RouteCell
+            cell.setupCell(with: "\(Int(routeTime)) мин.")
+            return cell
+        } else {
+            guard row > 0, row <= route.count else { return UITableViewCell() }
+            let cell = tableView.dequeueReusableCell(withIdentifier: STATION_CELL) as! StationCell
+            
+            let stationNumber = route[row-1].id
+            let stationName = metroModel.stations[stationNumber].name
+            cell.stationNameLbl.text = "\(stationName)"
+            cell.timeLbl.text = "\(Int(route[row-1].weight)) мин."
+            
+            let colorName = metroModel.stations[stationNumber].color
+            let color: UIColor
+            switch colorName {
+            case "blue":
+                color = UIColor(red: 66/255, green: 170/255, blue: 255/255, alpha: 1)
+            case "purple":
+                color = UIColor(red: 139/255, green: 0/255, blue: 255/255, alpha: 1)
+            case "orange":
+                color = UIColor(red: 255/255, green: 165/255, blue: 0/255, alpha: 1)
+            case "red" :
+                color = UIColor(red: 255/255, green: 36/255, blue: 0/255, alpha: 1)
+            case "green" :
+                color = UIColor(red: 0/255, green: 165/255, blue: 80/255, alpha: 1)
+            case "brown" :
+                color = UIColor(red: 149/255, green: 80/255, blue: 12/255, alpha: 1)
+            default:
+                color = .black
+            }
+            cell.lineView.backgroundColor = color
+            return cell
         }
-        cell.lineView.backgroundColor = color
-        return cell
     }
 }

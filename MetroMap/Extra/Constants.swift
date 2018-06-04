@@ -13,3 +13,4 @@ let URL_METRO_MAP = "https://raw.githubusercontent.com/MisnikovRoman/MetroMap/ma
 
 // cell identifier constants
 let STATION_CELL = "stationTableViewCell"
+let ROUTE_CELL = "routeTableViewCell"
