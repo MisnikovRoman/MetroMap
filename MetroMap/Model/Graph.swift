@@ -53,6 +53,9 @@ class Graph: CustomStringConvertible {
         
         // array of minimal routes from start point
         guard var routesFromSearchPoint = matrix.getRow(index: pointIndex) else { return nil }
+        // check if row contains non zero element
+        let rowIsEmpty = routesFromSearchPoint.contains { $0 != 0 }
+        guard rowIsEmpty else { return nil }
         // if in array is 0 -> route length = infinity (max of Int)
         for (index, value) in routesFromSearchPoint.enumerated() where value == 0 {
             routesFromSearchPoint[index] = 99999
@@ -98,6 +101,9 @@ class Graph: CustomStringConvertible {
     
     // find route from entered array of minimum routes (result of func searchAllRoutesForPoint())
     func findRouteInGraph(from start: Int, to end: Int, minRoutesFromStart: [Double]) -> [(id: Int, weight: Double)]? {
+        
+        // check if have route to end
+        guard minRoutesFromStart[end] != 99999 else { return nil }
         // create copy of array
         var minRoutes = minRoutesFromStart
         // erase number in start
@@ -122,6 +128,7 @@ class Graph: CustomStringConvertible {
                     route.append(index)
                     weights.append(value)
                     stepItem = index
+                    break
                 }
             }
         }

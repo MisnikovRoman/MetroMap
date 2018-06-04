@@ -24,7 +24,14 @@ class SimpleVC: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
     }
-
+    
+    // Данный метод наследуется от класса UIResponder классом UIViewController, а затем нашим классом ViewController (ViewController:UIViewController:UIResponder)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // hide keyboard when view is touched
+        startTextField.resignFirstResponder()
+        endTextField.resignFirstResponder()
+    }
+    
     // Buttons
     @IBAction func searchBtnPressed(_ sender: UIButton) {
         
@@ -34,28 +41,34 @@ class SimpleVC: UIViewController {
         guard let startIndex = Int(startText) else { return }
         guard let endIndex = Int(endText) else { return }
         
-        guard let url = URL(string: URL_METRO_MAP) else { return }
-        Alamofire.request(url).responseJSON { (response) in
-
-            // if there is no error
-            guard response.error == nil else { return }
-            // try to convert received data to dictionary
-            guard let json = response.result.value as? Dictionary<String, Any> else { return }
-            // try get data
-            guard let data = response.data else { return }
-
-            guard let metroMapModel = try? JSONDecoder().decode(MetroModel.self, from: data) else { return }
-            self.metroModel = metroMapModel
-            let graph = Graph(metroMapModel.stations, metroMapModel.connections)
+        // create new service
+        let metroService = MapService()
+        metroService.loadMapData { (model, error) in
+            // check optionals
+            guard error == nil else { print(error!.localizedDescription); return }
+            guard let model = model else { return }
+            
+            // save model
+            self.metroModel = model
+            
+            // create graph
+            let graph = Graph(model.stations, model.connections)
             guard let minRoutes = graph.searchAllRoutesForPoint(pointIndex: startIndex) else {
                 print("-> NO MIN ROUTES")
                 return
             }
+            
+            // search routes
             guard let newRoute = graph.findRouteInGraph(from: startIndex, to: endIndex, minRoutesFromStart: minRoutes) else { return }
             print(newRoute)
+            
+            // save route
             route = newRoute
+            
             self.tableView.reloadData()
+            
         }
+
     }
 }
 
