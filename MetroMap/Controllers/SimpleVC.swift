@@ -8,10 +8,14 @@
 
 import UIKit
 import Alamofire
+import DropDown
 
 class SimpleVC: UIViewController {
     
+    // Variables
     var metroModel: MetroModel!
+    let startDropDown = DropDown()
+    let endDropDown = DropDown()
     
     // Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -23,6 +27,47 @@ class SimpleVC: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        setupDropDown()
+    }
+    
+    // search methods
+    func setupDropDown() {
+        
+        // set anchor
+        startDropDown.anchorView = startTextField
+        endDropDown.anchorView = endTextField
+        
+        // data sources
+        startDropDown.dataSource = SearchModel.instance.foundedStations
+        endDropDown.dataSource = SearchModel.instance.foundedStations
+        
+        // disable shadow
+        startDropDown.shadowColor = .clear
+        endDropDown.shadowColor = .clear
+        
+        // add opacity
+        startDropDown.backgroundColor = UIColor(red: 236/255, green: 236/255, blue: 236/255, alpha: 0.7)
+        endDropDown.backgroundColor = UIColor(red: 236/255, green: 236/255, blue: 236/255, alpha: 0.7)
+        
+        // offset from top
+        startDropDown.bottomOffset = CGPoint(x: 0, y:(startDropDown.anchorView?.plainView.bounds.height)! + 8)
+        endDropDown.bottomOffset = CGPoint(x: 0, y:(endDropDown.anchorView?.plainView.bounds.height)! + 8)
+        
+        // press handle
+        startDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            print("Selected item: \(item) at index: \(index)")
+            self.startTextField.text = item
+            SearchModel.instance.resetSearch()
+        }
+        
+        // press handle
+        endDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            print("Selected item: \(item) at index: \(index)")
+            self.endTextField.text = item
+            SearchModel.instance.resetSearch()
+        }
+        
     }
     
     // Данный метод наследуется от класса UIResponder классом UIViewController, а затем нашим классом ViewController (ViewController:UIViewController:UIResponder)
@@ -32,21 +77,38 @@ class SimpleVC: UIViewController {
         endTextField.resignFirstResponder()
     }
     
-    // Buttons
+    // UI Actions
     @IBAction func searchBtnPressed(_ sender: UIBarButtonItem) {
         
         guard let startText = startTextField.text else { return }
         guard let endText = endTextField.text else { return }
         
-        guard let startIndex = Int(startText) else { return }
-        guard let endIndex = Int(endText) else { return }
+//        guard let startIndex = Int(startText) else { return }
+//        guard let endIndex = Int(endText) else { return }
         
         // create new service
         let metroService = MapService()
         metroService.loadMapData { (model, error) in
+            
             // check optionals
             guard error == nil else { print(error!.localizedDescription); return }
             guard let model = model else { return }
+            
+            // find station index from station name
+            guard let startIndex = model.findStationIndex(byName: startText) else {
+                let alert = UIAlertController(title: "Error", message: "Didn't find start station", preferredStyle: .alert)
+                let action = UIAlertAction(title: "Continue", style: .cancel, handler: nil)
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+                return
+            }
+            guard let endIndex = model.findStationIndex(byName: endText) else {
+                let alert = UIAlertController(title: "Error", message: "Didn't find end station", preferredStyle: .alert)
+                let action = UIAlertAction(title: "Continue", style: .cancel, handler: nil)
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+                return
+            }
             
             // save model
             self.metroModel = model
@@ -66,10 +128,31 @@ class SimpleVC: UIViewController {
             route = newRoute
             
             self.tableView.reloadData()
-            
         }
-
     }
+    
+    @IBAction func textFieldDidEdited(_ sender: UITextField) {
+        
+        var dropDown: DropDown!
+        var searchTF: UITextField!
+        
+        if sender == startTextField {
+            dropDown = startDropDown
+            searchTF = startTextField
+        } else {
+            dropDown = endDropDown
+            searchTF = endTextField
+        }
+        
+        guard let search = searchTF.text, search != "" else { return }
+        SearchModel.instance.searchText(search)
+        
+        dropDown.dataSource = SearchModel.instance.foundedStations
+        if dropDown.isHidden { dropDown.show() }
+        
+    }
+    
+    
 }
 
 extension SimpleVC: UITableViewDelegate, UITableViewDataSource {

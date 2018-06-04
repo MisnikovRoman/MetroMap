@@ -114,12 +114,18 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldDidEdited:" destination="xbf-T4-n6C" eventType="editingChanged" id="ZCY-iK-eoH"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="до" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="znd-NP-Xyg">
                                 <rect key="frame" x="191.5" y="80" width="175.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldDidEdited:" destination="xbf-T4-n6C" eventType="editingChanged" id="A3O-5d-Yu0"/>
+                                </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S95-Pp-Cex">
                                 <rect key="frame" x="0.0" y="126" width="375" height="541"/>
@@ -218,7 +224,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="endTextField" destination="znd-NP-Xyg" id="iA5-fO-yP6"/>
+                        <outlet property="endTextField" destination="znd-NP-Xyg" id="zhW-Kn-VQT"/>
                         <outlet property="startTextField" destination="Fr2-IG-5Oc" id="IUB-pr-GtO"/>
                         <outlet property="tableView" destination="S95-Pp-Cex" id="nGa-Ji-WM9"/>
                     </connections>

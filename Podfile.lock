@@ -1,12 +1,15 @@
 PODS:
   - Alamofire (4.7.1)
+  - DropDown (2.3.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - DropDown
 
 SPEC CHECKSUMS:
   Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
+  DropDown: 7f87abecc28f9b4edad810fe1211c5c018c257e5
 
-PODFILE CHECKSUM: 911775248105bdf39247365acd893abd1f06cdcd
+PODFILE CHECKSUM: d8f0eba92a253f9c381007a5e417d0831beb2781
 
 COCOAPODS: 1.4.0

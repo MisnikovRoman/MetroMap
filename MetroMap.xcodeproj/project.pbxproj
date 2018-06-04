@@ -16,6 +16,7 @@
 		C80BFEE120B5A5AB003C1DEA /* StationConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80BFEDD20B5A5AB003C1DEA /* StationConnection.swift */; };
 		C80FA2CF20AE18F900BAE4B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80FA2CE20AE18F900BAE4B3 /* Constants.swift */; };
 		C8108F2F20C5751400C6A00B /* RouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8108F2E20C5751400C6A00B /* RouteCell.swift */; };
+		C8108F3320C57EC900C6A00B /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8108F3220C57EC900C6A00B /* SearchModel.swift */; };
 		C856ACB220C1352D00425278 /* MapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C856ACB120C1352D00425278 /* MapService.swift */; };
 		C8D8BD5820ADF2CE007C7F52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8BD5720ADF2CE007C7F52 /* AppDelegate.swift */; };
 		C8D8BD5A20ADF2CE007C7F52 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8BD5920ADF2CE007C7F52 /* SearchVC.swift */; };
@@ -52,6 +53,7 @@
 		C80BFEDD20B5A5AB003C1DEA /* StationConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationConnection.swift; sourceTree = "<group>"; };
 		C80FA2CE20AE18F900BAE4B3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C8108F2E20C5751400C6A00B /* RouteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCell.swift; sourceTree = "<group>"; };
+		C8108F3220C57EC900C6A00B /* SearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		C856ACB120C1352D00425278 /* MapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapService.swift; sourceTree = "<group>"; };
 		C8D8BD5420ADF2CE007C7F52 /* MetroMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetroMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D8BD5720ADF2CE007C7F52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				C80BFEDD20B5A5AB003C1DEA /* StationConnection.swift */,
 				C80BFEDA20B5A5AB003C1DEA /* Matrix.swift */,
 				C8D8BD7A20ADF62C007C7F52 /* Point.swift */,
+				C8108F3220C57EC900C6A00B /* SearchModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -330,10 +333,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MetroMap/Pods-MetroMap-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -421,6 +426,7 @@
 				C8D8BD5A20ADF2CE007C7F52 /* SearchVC.swift in Sources */,
 				C8D8BD5820ADF2CE007C7F52 /* AppDelegate.swift in Sources */,
 				C80BFEE120B5A5AB003C1DEA /* StationConnection.swift in Sources */,
+				C8108F3320C57EC900C6A00B /* SearchModel.swift in Sources */,
 				C8108F2F20C5751400C6A00B /* RouteCell.swift in Sources */,
 				C80FA2CF20AE18F900BAE4B3 /* Constants.swift in Sources */,
 			);

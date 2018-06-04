@@ -7,6 +7,7 @@ target 'MetroMap' do
 
   # Pods for MetroMap
   pod 'Alamofire', '~> 4.7'
+  pod 'DropDown'
 
   target 'MetroMapTests' do
     inherit! :search_paths
